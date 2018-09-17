@@ -1,0 +1,26 @@
+<div>
+    <div class="text-center"><h3>Member Description</h3></div>
+    <div>
+        <div class="table-responsive">
+            <table class="table table-striped" *ngIf = 'members && members.length'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let member of members">
+                        <td>{{ member.name }}</td>
+                        <td>{{ member.age }}</td>
+                        <td>{{ member.address }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="text-center">
+    <button type="button" class="btn btn-primary" [routerLink]="['/addMember']">Add Member</button>
+</div>
